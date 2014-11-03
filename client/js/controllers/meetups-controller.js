@@ -1,4 +1,6 @@
-function meetupsCtrl($scope) {
+app.controller('meetupsCtrl', ['$scope', '$resource',
+    function ($scope, $resource){
+
     $scope.meetups = [
         {name: "Meetup #1"},
         {name: "Meetup #2"},
@@ -10,4 +12,6 @@ function meetupsCtrl($scope) {
         $scope.meetups.push({ name: $scope.meetupName });
         $scope.meetupName = '';
     };
-}
+
+}]);
+
