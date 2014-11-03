@@ -9,9 +9,19 @@
     </head>
 <body>
     <div ng-controller="meetupsCtrl">
-        <h1>There are {{meetupsCount}} meetups</h1>
+        <h1>There are {{meetups.length}} meetups</h1>
+        <ul>
+            <li ng-repeat="meetup in meetups">
+                {{meetup.name}}
+            </li>
+        </ul>
+        <form ng-submit="createMeetup()">
+            <input type="text" placeholder="Meetup Name" ng-model="meetupName"></input>
+            <button type="submit">Add</button>
+        </form>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-resource.js"></script>
     <script type="text/javascript" src="/js/controllers/meetups-controller.js"></script>
 </body>
 </html>
