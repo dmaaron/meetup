@@ -1,4 +1,7 @@
 {
-    "name": "meetup",
-    "version": "0.0.2"
+  "name": "meetup",
+  "version": "0.0.2",
+  "dependencies": {
+    "express": "^4.10.1"
+  }
 }
